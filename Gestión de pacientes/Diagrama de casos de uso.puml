@@ -1,0 +1,16 @@
+@startuml "Gestión de pacientes"
+left to right direction
+
+actor Secretaria as se
+
+usecase "Registrar paciente" as RP
+usecase "Consultar paciente" as CP
+usecase "Modificar paciente" as MP
+usecase "Eliminar paciente" as EP
+
+se --> (RP)
+se --> (CP)
+(CP) <.. (MP):extend
+(CP) <..(EP):extend
+
+@enduml

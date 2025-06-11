@@ -1,0 +1,16 @@
+@startuml "Gestión de especialidades"
+left to right direction
+
+actor Secretaria as se
+
+usecase "Registrar especialidad" as RE
+usecase "Consultar especialidad" as CE
+usecase "Modificar especialidad" as ME
+usecase "Eliminar especialidad" as EE
+
+se -- > (RE)
+se --> (CE)
+(CE) <.. (ME):extend
+(CE) <..(EE):extend
+
+@enduml

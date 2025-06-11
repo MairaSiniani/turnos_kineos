@@ -1,0 +1,17 @@
+@startuml "Gestión de Usuarios"
+
+left to right direction
+
+actor Administrador as adm
+
+usecase "Registrar usuario" as RU
+usecase "Consultar usuario" as CU
+usecase "Modificar Usuario" as MU
+usecase "ELiminar usuarios" as EU
+
+adm --> (RU)
+adm --> (CU)
+(CU) ..> (MU): extend
+(CU) ..>(EU): extend
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml "Gestión de turnos"
+
+left to right direction
+
+actor Secretaria as se
+
+usecase "Registrar turno" as RT
+usecase "Consultar turno" as CT
+usecase "Consultar especialidad" as CE
+usecase "Consultar profesion" as CP
+usecase "Reprogamar turno" as RP
+usecase "Eliminar turno" as ET
+
+se --> (RT)
+(RT) ..>(CE): include
+(CE) <|.. (CP): extend
+se --> (CT)
+(CT) <|.. (RP): extend
+(CT) <|..(ET): extend
+
+@enduml

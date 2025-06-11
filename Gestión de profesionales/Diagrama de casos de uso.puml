@@ -1,0 +1,16 @@
+@startuml "Gestión de profesionales"
+left to right direction
+
+actor Secretaria as se
+
+usecase "Registrar profesional" as RP
+usecase "Consultar profesional" as CP
+usecase "Modificar profesional" as MP
+usecase "Eliminar profesional" as EP
+
+se --> (RP)
+se --> (CP)
+(CP) <.. (MP):extend
+(CP) <..(EP):extend
+
+@enduml

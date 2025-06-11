@@ -1,0 +1,18 @@
+@startuml "Gestión de Permisos (o roles)"
+left to right direction
+
+actor Administrador as adm
+
+usecase "Crear un rol" as C1
+usecase "Consultar roles" as CR
+usecase "Definir nivel de acceso" as DNA
+usecase "Modificar rol" as MR
+usecase "Eliminar rol" as ER
+
+adm --> (C1)
+(C1) --> (DNA): include
+adm --> (CR)
+(CR) ..> (MR):extend
+(CR) ..>(ER):extend
+
+@enduml
