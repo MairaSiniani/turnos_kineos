@@ -1,1 +1,0 @@
-**RF01:** Crear, consultar, modificar y eliminar especialidades con nombre de la especialidad y la duración de cada consulta.
